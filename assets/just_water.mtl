@@ -1,0 +1,13 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl WATER
+Ns 735.817682
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.591743 0.591743 0.591743
+Ke 0.000000 0.000000 0.000000
+Ni 3.000000
+d 1.000000
+illum 2
+map_Kd antik_sahne.png
