@@ -16,10 +16,12 @@ def input(key):
 
 app = Ursina(borderless=False)
 
-anim = FrameAnimation3d(name="anim_copter\\anim_", fps=60, texture="copter_baked", autoplay=False, rotation_y = 180)
+ground = Entity(model="plane", scale=300, texture="shore", y=-0.3)
+
+anim = FrameAnimation3d(name="helicopter_anim\\helicopter_animation_", fps=60, texture="BAKE_Helicopter", autoplay=False, rotation_y = 180)
 anim.start()
 
-ground = Entity(model="plane", scale=300, texture="shore")
+platform = Entity(model="platform.gltf")
 
 Sky()
 

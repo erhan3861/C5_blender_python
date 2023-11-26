@@ -3,7 +3,7 @@ import random
 from ursina.shaders import basic_lighting_shader as bls
 from ursina import curve
 
-# Entity.default_shader = bls
+Entity.default_shader = bls
 
 
 def select():
@@ -11,8 +11,8 @@ def select():
     if helicopter.selected: helicopter.color = color.lime
     else: helicopter.color = color.white
 
-def update():
-    pervane.rotation_y += held_keys["r"] * time.dt * 50
+# def update():
+#     pervane.rotation_y += held_keys["r"] * time.dt * 50
 
 def input(key):
     if key == "+":
@@ -20,11 +20,13 @@ def input(key):
 
 app = Ursina(borderless=False)
 
-helicopter = Entity(model="govde.glb", collider="box", selected=False, area=Entity(mode=""))
+helicopter = Entity(model="helikopter_test.obj", collider="box", selected=False, area=Entity(mode=""), texture="BAKE_Helicopter.png")
 helicopter.on_click = select
 
-pervane = Entity(model="pervane.glb", parent=helicopter, collider="box", y=3)
-# parent=helicopter , position = (-2.69147, 282.882, 26.5073)
+# pervane = Entity(model="pervane.glb", parent=helicopter, collider="box", y=3)
+# # parent=helicopter , position = (-2.69147, 282.882, 26.5073)
+
+
 
 EditorCamera()
 
